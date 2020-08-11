@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../logo.png';
 import styled from 'styled-components';
-import {ButtonContainer} from './Button';
 
 const NavWrapper = styled.nav`
+    font-size: 1.1rem;  
     background: #FFF;
     height: 90px;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.4);
@@ -13,11 +13,23 @@ const NavWrapper = styled.nav`
     }
     .nav-link {
         color: #000;
-        transition: all ease-in-out 0.3s;
+        transition: all ease 0.1s;
         border-radius: 5px;
         &:hover {
-            background: var(--lightRed);
-            padding: 5px 10px;
+            background: #000;
+            overflow: hidden;
+            color: #fff;
+        }
+    }
+    .cart-icon {
+        padding: 5px 10px;
+        transition: all ease 0.1s;
+        border-radius: 5px;
+        color: #000;
+        text-decoration: none;
+        display: inline-block;
+        &:hover {
+            background: #000;
             color: #fff;
         }
     }
@@ -51,11 +63,9 @@ export const Navigation = () => (
             </li>
         </ul>
         <Link to="/cart" className="ml-auto">
-            <ButtonContainer>
-                <span className="mr-2">
+                <span className="cart-icon mr-2">
                     <i className="fa fa-shopping-cart" aria-hidden="true"></i> Cart
                 </span>
-            </ButtonContainer>
         </Link>
     </NavWrapper>
 )

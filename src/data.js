@@ -1,3 +1,5 @@
+//This contains all the data for th
+
 export const storeProducts = [
   {
     id: 1,
